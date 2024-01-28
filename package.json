@@ -1,0 +1,39 @@
+{
+  "name": "adventofcode2023",
+  "version": "0.0.1",
+  "description": "Advent of code 2023 puzzles using Effect TS.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "author": "Benoit Ruiz",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.0.6",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@effect/schema": "^0.61.3",
+    "effect": "^2.2.2"
+  },
+  "volta": {
+    "node": "21.6.1"
+  }
+}
