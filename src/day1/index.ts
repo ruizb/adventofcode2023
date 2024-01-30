@@ -4,7 +4,7 @@ import { program as part2Program } from './part2/index.js'
 import { InputProvider, InputProviderLive } from '../common/index.js'
 
 const program = pipe(
-  Effect.log('Day X'),
+  Effect.log('Day 1'),
   Effect.flatMap(() =>
     part1Program.pipe(
       Effect.provideService(InputProvider, InputProviderLive),

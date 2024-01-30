@@ -30,10 +30,10 @@
     }
   },
   "dependencies": {
-    "@effect/schema": "^0.61.3",
+    "@effect/schema": "^0.61.4",
     "effect": "^2.2.2"
   },
   "volta": {
-    "node": "21.6.1"
+    "node": "18.17.1"
   }
 }

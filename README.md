@@ -25,5 +25,5 @@ npm test
 ```
 
 ```sh
-npx vitest --run -t "Day 1 part 1"
+npx run test -- -t "Day 1 part 1"
 ```
