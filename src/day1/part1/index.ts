@@ -1,7 +1,7 @@
 import { Chunk, Effect, Number, Option, Tuple, pipe } from 'effect'
 import { InputProvider } from '../../common/index.js'
 
-const isDigitChar = (char: string): boolean => {
+export const isDigitChar = (char: string): boolean => {
   return char >= '0' && char <= '9'
 }
 

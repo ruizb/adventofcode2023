@@ -9,10 +9,31 @@ describe('Day 1 part 2', () => {
       program,
       InputProvider,
       InputProvider.of({
-        get: () => Effect.succeed([]),
+        get: () =>
+          Effect.succeed([
+            'two1nine',
+            'eightwothree',
+            'abcone2threexyz',
+            'xtwone3four',
+            '4nineeightseven2',
+            'zoneight234',
+            '7pqrstsixteen',
+          ]),
       })
     )
 
-    expect(Effect.runSync(runnable)).toEqual(42)
+    expect(Effect.runSync(runnable)).toEqual(281)
+  })
+
+  it('should detect when a line is missing a digit', () => {
+    const runnable = Effect.provideService(
+      program,
+      InputProvider,
+      InputProvider.of({
+        get: () => Effect.succeed(['oneight', 'abcfouldef', '1twotree']),
+      })
+    )
+
+    expect(() => Effect.runSync(runnable)).toThrow('No digit found')
   })
 })
